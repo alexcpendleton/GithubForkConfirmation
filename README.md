@@ -2,8 +2,11 @@
 
 Are you always accidentally forking repositories? I know I am. This Chrome Extension (or User Script!) will help. It adds a confirm dialog to the Fork button on Github repositories and Gists.
 
-Available on the Chrome store:
-Or as a [source/UserScript/GithubForkConfirmation.user.js](User Script)
+Available on the Chrome store: 
+
+[https://chrome.google.com/webstore/detail/github-fork-confirmation/mofjdkidemhjconaodballcmpnaofeod](https://chrome.google.com/webstore/detail/github-fork-confirmation/mofjdkidemhjconaodballcmpnaofeod)
+
+Or as a [User Script](source/UserScript/GithubForkConfirmation.user.js)
 
 Here's what you can expect:
 ![Screenshot](/meta/Screenshot.png)
