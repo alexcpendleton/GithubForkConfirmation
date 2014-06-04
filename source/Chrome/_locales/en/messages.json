@@ -1,7 +1,7 @@
 {
-  "ConfirmProject": {
-    "message":"Are you positive you want to fork this project?"
-    ,"description":"Confirmation text for forking a project."
+  "ConfirmRepository": {
+    "message":"Are you positive you want to fork this repository?"
+    ,"description":"Confirmation text for forking a repository."
   }
   ,"ConfirmGist": {
     "message":"Are you positive you want to fork this Gist?"

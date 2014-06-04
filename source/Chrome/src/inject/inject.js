@@ -6,7 +6,7 @@
 			return window.location.toString().toLowerCase().indexOf("https://gist.github") > -1;
 		}
 		function createConfirmationMessage() {
-			var messageName = isGist() ? "ConfirmGist" : "ConfirmProject";
+			var messageName = isGist() ? "ConfirmGist" : "ConfirmRepository";
 			return messageSource.getMessage(messageName);
 		}
 		function onFork(event) {
