@@ -2,7 +2,7 @@
   "name": "Github Fork Confirmation",
   "version": "1.0.0",
   "manifest_version": 2,
-  "description": "Adds a confirmation dialog to the Github (and Gist) Fork button.",
+  "description": "Adds a confirmation dialog to the Github and Gist Fork button.",
   "homepage_url": "https://alexcpendleton.github.io/GithubForkConfirmation",
   "icons": {
     "16": "icons/icon16.png",
@@ -10,12 +10,6 @@
     "128": "icons/icon128.png"
   },
   "default_locale": "en",
-  "background": {
-    "scripts": [
-      "src/bg/background.js"
-    ],
-    "persistent": false
-  },
   "permissions": [
     "https://github.com/*",
     "https://gist.github.com/*"
