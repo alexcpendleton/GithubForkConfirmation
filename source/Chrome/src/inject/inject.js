@@ -19,13 +19,13 @@
 			}
 			return true;
 		}
-		
-		function findAndSetBindings() {	
+
+		function findAndSetBindings() {
 			// When going to a Gist from the "All Gists" page, this script is never reloaded because it's using the History API or something
 			// From a content script we don't have access to history events (I couldn't find them anyway)
 			// So instead we wait for any click event on the page and then look for the fork button and subscribe to its click event
 			document.addEventListener("click", function(event) {
-				var selector = ".fork-button";
+				var selector = "form[action*='/fork'] button[type='submit']";
 				var forkButton = document.querySelector(selector);
 				if(forkButton) {
 					var hasAttribute = forkButton.getAttribute(gfcAttributeName);
@@ -37,7 +37,7 @@
 			}, true);
 		}
 		this.bind = function() {
-			findAndSetBindings();	
+			findAndSetBindings();
 		}
 	}
 	var confirmer = new GithubForkConfirmer(chrome.i18n);

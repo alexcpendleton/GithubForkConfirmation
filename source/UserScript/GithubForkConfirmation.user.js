@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name       Github Fork Confirmation
 // @namespace  https://alexcpendleton.com/
-// @version    1.0
-// @description  Adds a Confirm dialog to Github's Fork button 
+// @version    1.0.1
+// @description  Adds a Confirm dialog to Github's Fork button
 // @match      https://github.com/*
-// @match      https://gist.github.com/* 
+// @match      https://gist.github.com/*
 // @include      https://github.com/*
 // @include      https://gist.github.com/*
 // @copyright  2014+, Alex Pendleton
@@ -31,13 +31,13 @@
 			}
 			return true;
 		}
-		
-		function findAndSetBindings() {	
+
+		function findAndSetBindings() {
 			// When going to a Gist from the "All Gists" page, this script is never reloaded because it's using the History API or something
 			// From a content script we don't have access to history events (I couldn't find them anyway)
 			// So instead we wait for any click event on the page and then look for the fork button and subscribe to its click event
 			document.addEventListener("click", function(event) {
-				var selector = ".fork-button";
+				var selector = "form[action*='/fork'] button[type='submit']";
 				var forkButton = document.querySelector(selector);
 				if(forkButton) {
 					var hasAttribute = forkButton.getAttribute(gfcAttributeName);
@@ -49,7 +49,7 @@
 			}, true);
 		}
 		this.bind = function() {
-			findAndSetBindings();	
+			findAndSetBindings();
 		}
 	}
     function MessageProvider() {
