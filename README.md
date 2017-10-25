@@ -1,4 +1,4 @@
-#Github Fork Confirmation
+# Github Fork Confirmation
 
 Are you always accidentally forking repositories? I know I am. This Chrome Extension (or User Script!) will help. It adds a confirm dialog to the Fork button on Github repositories and Gists.
 
@@ -12,7 +12,7 @@ Here's what you can expect:
 
 ----------
 
-##Changelog
+## Changelog
 
-###v1.0.1 (August 25, 2015)
+### v1.0.1 (August 25, 2015)
 - Updated the selector used to find the "Fork" button. Github changed their HTML.
